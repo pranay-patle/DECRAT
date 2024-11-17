@@ -8,9 +8,7 @@ DECRAT (Detection of Remote Access Tools) is a Python framework developed to ide
 - [Installation](#installation)
 - [Usage](#usage)
 - [Methodology](#methodology)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Project Overview
 
@@ -50,3 +48,21 @@ To use DECRAT, run the script with the following options:
 
 ```bash
 python decrat.py -i <input_pcap_file> [--debug]
+```
+- -i, --input: The input pcap file for analysis.
+- --debug: Optional flag for detailed output.
+Example
+```bash
+python decrat.py -i capture.pcap --debug
+```
+Upon successful execution, DECRAT will generate a CSV file named output.csv and output a report summarizing any suspicious remote access activity detected in the network traffic.
+
+## Methodology
+The DECRAT framework follows these steps:
+
+
+- **PCAP to CSV Conversion**: The captured network traffic is converted to CSV format.
+- **Data Analysis**: The CSV file is analyzed for indicators of RAT and unauthorized access, such as specific ports, keywords, and patterns related to remote access tools.
+- **Report Generation**: A summary of any suspicious activities is generated, indicating potential RAT or Metasploit payload detections.
+
+
