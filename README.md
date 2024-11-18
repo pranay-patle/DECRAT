@@ -38,7 +38,9 @@ To install DECRAT, ensure you have the following prerequisites installed:
 
 2. **Install Dependencies**
     ```bash
-    pip install -r requirements.txt
+    chmod +x setup.sh
+
+    ./setup.sh
     ```
     *(Note: Ensure `tshark` is installed on your system. If not, [download it here](https://www.wireshark.org/#download)).*
 
